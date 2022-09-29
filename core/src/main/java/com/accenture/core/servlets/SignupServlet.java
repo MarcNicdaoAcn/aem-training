@@ -8,6 +8,8 @@ import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.propertytypes.ServiceDescription;
+import org.osgi.service.component.annotations.Reference;
+import com.accenture.core.services.SignupService;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -24,11 +26,14 @@ public class SignupServlet extends SlingAllMethodsServlet {
 
     private static final long serialVersionUID = 1L;
 
+    @Reference
+    private SignupService sus;
+
     @Override
     protected void doPost(final SlingHttpServletRequest request, final SlingHttpServletResponse response)
             throws ServletException, IOException {
         String datetime = Calendar.getInstance().getTime().toString();
-        if (null == request.getResourceResolver().getResource("/content/usergenerated/signup")) {
+        if (null == request.getResourceResolver().getResource(sus.getPath())) {
             Map<String, Object> props = new HashMap<>();
 
             props.put("jcr:primaryType", "nt:unstructured");
@@ -36,12 +41,13 @@ public class SignupServlet extends SlingAllMethodsServlet {
 
             ResourceUtil.getOrCreateResource(
                     request.getResourceResolver(),
-                    "/content/usergenerated/signup",
+                    sus.getPath(),
                     props,
                     "nt:unstructured",
                     true);
         } else {
-            ModifiableValueMap mvm = request.getResourceResolver().getResource("/content/usergenerated/signup")
+            ModifiableValueMap mvm = request.getResourceResolver().getResource(sus
+                    .getPath())
                     .adaptTo(ModifiableValueMap.class);
             if (null != mvm) {
                 mvm.put("signupdate", datetime);
