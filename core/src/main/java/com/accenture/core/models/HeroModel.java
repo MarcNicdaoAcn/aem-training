@@ -32,5 +32,7 @@ public class HeroModel {
         return buttonText;
     }
 
-    public String getIcon() { return icon; }
+    public String getIcon() {
+        return icon;
+    }
 }
