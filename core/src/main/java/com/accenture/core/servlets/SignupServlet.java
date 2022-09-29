@@ -49,7 +49,7 @@ public class SignupServlet extends SlingAllMethodsServlet {
             }
         }
 
-        response.setContentType("text/plain");
+        response.setContentType("json");
         response.getWriter().write(datetime);
     }
 }
