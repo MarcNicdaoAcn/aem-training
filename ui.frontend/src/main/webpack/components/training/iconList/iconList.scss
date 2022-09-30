@@ -1,0 +1,19 @@
+root {
+    --fa-rotate-angle: rotate(45deg);
+}
+
+#iconlist{
+    display: flex;
+    flex-wrap: wrap;
+}
+#icon.iconlist{
+    justify-content: space-around;
+}
+
+.iconlist__icon-container{
+    width: 50%;
+}
+
+.flex-column-reverse{
+    flex-direction: column-reverse;
+}
