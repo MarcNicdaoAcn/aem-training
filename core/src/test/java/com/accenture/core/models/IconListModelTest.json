@@ -1,0 +1,17 @@
+{
+  "iconlist": {
+    "jcr:primaryType": "cq:Component",
+    "sling:resourceType": "training/components/content/iconList",
+    "icon1": "fa-cloud"
+  },
+  "title": {
+    "jcr:primaryType": "cq:Component",
+    "sling:resourceType": "training/components/content/iconList",
+    "title": "Test title"
+  },
+  "description": {
+    "jcr:primaryType": "cq:Component",
+    "sling:resourceType": "training/components/content/iconList",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed luctus orci. Nullam ut risus volutpat, convallis justo et, fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  }
+}

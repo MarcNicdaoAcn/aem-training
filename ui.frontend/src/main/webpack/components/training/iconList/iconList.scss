@@ -1,0 +1,66 @@
+root {
+    --fa-rotate-angle: rotate(45deg);
+}
+
+#iconlist__section{
+    display: flex;
+    margin: 1rem;
+    padding-block: 2rem;
+}
+
+.iconlist {
+    padding-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.iconlist__text {
+    padding-right: 20%;
+    padding-left: 1rem;
+}
+
+
+
+.iconlist__icon-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ #iconlist__section .iconlist,
+ #iconlist__section .iconlist__text {
+     width: 50%;
+ }
+
+
+.reverse #iconlist__section{
+    flex-direction: row-reverse;
+    .iconlist{
+        padding-right: 20%;
+        padding-left: 1rem;
+    }
+    .iconlist__text {
+        text-align: right;
+        padding-left: 20%;
+        padding-right: 1rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    #iconlist__section .iconlist,
+    #iconlist__section .iconlist__text {
+            width: 100%;
+    }
+    .iconlist{
+    padding-right: 1rem;
+    }
+    .iconlist__text {
+        padding-left: 1rem;
+    }
+
+
+}
