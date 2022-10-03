@@ -6,7 +6,7 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class IconListModel{
+public class IconListModel {
 
     @ValueMapValue
     private String icon1;
@@ -25,6 +25,12 @@ public class IconListModel{
 
     @ValueMapValue
     private String icon6;
+
+    @ValueMapValue
+    private String title;
+
+    @ValueMapValue
+    private String description;
 
     public String getIcon1() {
         return icon1;
@@ -48,5 +54,13 @@ public class IconListModel{
 
     public String getIcon6() {
         return icon6;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

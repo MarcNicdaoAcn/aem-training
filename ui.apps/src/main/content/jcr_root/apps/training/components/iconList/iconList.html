@@ -1,48 +1,60 @@
 <section
   data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
-  id="iconlist"
+  id="iconlist__section"
   data-sly-use.model="com.accenture.core.models.IconListModel"
-  class="iconlist"
+  class="iconlist__section"
 >
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon1 || 'fa-code'}"></i>
-    </span>
-  </div>
+  <div class="iconlist">
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-stack-1x ${model.icon1 || 'fa-code'} fa-inverse"></i>
+      </span>
+    </div>
 
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon2 || 'fa-bolt'}"></i>
-    </span>
-  </div>
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-stack-1x ${model.icon2 || 'fa-bolt'} fa-inverse"></i>
+      </span>
+    </div>
 
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon3 || 'fa-camera-retro'}"></i>
-    </span>
-  </div>
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i
+          class="fas fa-stack-1x ${model.icon3 || 'fa-camera-retro'} fa-inverse"
+        ></i>
+      </span>
+    </div>
 
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon4 || 'fa-cog'}"></i>
-    </span>
-  </div>
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-stack-1x ${model.icon4 || 'fa-cog'} fa-inverse"></i>
+      </span>
+    </div>
 
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon5 || 'fa-desktop'}"></i>
-    </span>
-  </div>
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i
+          class="fas fa-stack-1x ${model.icon5 || 'fa-desktop'} fa-inverse"
+        ></i>
+      </span>
+    </div>
 
-  <div class="iconlist__icon-container">
-    <span class="fa-stack fa-4x iconlist__icon">
-      <i class="fal fa-square-full fa-stack-2x"></i>
-      <i class="fas fa-stack-1x ${model.icon6 || 'fa-calendar'}"></i>
-    </span>
+    <div class="iconlist__icon-container">
+      <span class="fa-stack fa-3x iconlist__icon">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i
+          class="fas fa-stack-1x ${model.icon6 || 'fa-calendar'} fa-inverse"
+        ></i>
+      </span>
+    </div>
+  </div>
+  <div class="iconlist__text">
+    <h2 class="iconlist__title">${model.title}</h2>
+    <div class="iconlist__description">${model.description}</div>
   </div>
 </section>
